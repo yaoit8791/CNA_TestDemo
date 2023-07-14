@@ -11,8 +11,8 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=somewordpress
       - MYSQL_DATABASE=wordpress
-      - MYSQL_USER=wordpress
-      - MYSQL_PASSWORD=wordpress
+      - MYSQL_USER=testwp
+      - MYSQL_PASSWORD=testwp123
     expose:
       - 3306
       - 33060
@@ -25,7 +25,7 @@ services:
     restart: always
     environment:
       - WORDPRESS_DB_HOST=db
-      - WORDPRESS_DB_USER=wordpress
+      - WORDPRESS_DB_USER=testwp
       - WORDPRESS_DB_PASSWORD=testwp123
       - WORDPRESS_DB_NAME=wordpress
 volumes:
