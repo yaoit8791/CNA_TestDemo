@@ -10,8 +10,8 @@ pipeline {
     //stage('Build') {
       //steps {
         // Add any build steps if necessary
-      }
-    }
+      //}
+    //}
     stage('Deploy') {
       steps {
         sh 'docker-compose up -d' // Assuming you're using Docker for WordPress deployment
@@ -21,6 +21,6 @@ pipeline {
       //steps {
         // Execute any database setup commands, e.g., using WP-CLI
       //}
-    }
+    //}
   }
 }
