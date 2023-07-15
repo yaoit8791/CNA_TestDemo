@@ -12,7 +12,7 @@ services:
       - MYSQL_ROOT_PASSWORD=somewordpress
       - MYSQL_DATABASE=wordpress
       - MYSQL_USER=testwp
-      - MYSQL_PASSWORD=testwp123
+      - MYSQL_PASSWORD=testwp12345
     expose:
       - 3306
       - 33060
