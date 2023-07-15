@@ -26,7 +26,7 @@ services:
     environment:
       - WORDPRESS_DB_HOST=db
       - WORDPRESS_DB_USER=testwp
-      - WORDPRESS_DB_PASSWORD=testwp123
+      - WORDPRESS_DB_PASSWORD=testwp12345
       - WORDPRESS_DB_NAME=wordpress
 volumes:
   db_data:
