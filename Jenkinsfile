@@ -19,7 +19,7 @@ pipeline {
     }
     //stage('Setup Database') {
       //steps {
-        // Execute any database setup commands, e.g., using WP-CLI
+        // 12Execute any database setup commands, e.g., using WP-CLI
       //}
     //}
   }
