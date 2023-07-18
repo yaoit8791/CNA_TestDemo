@@ -9,7 +9,7 @@ pipeline {
     }
     //stage('Build') {
       //steps {
-        // 1Add any build steps if necessary
+        // 12Add any build steps if necessary
       //}
     //}
     stage('Deploy') {
