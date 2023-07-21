@@ -1,1 +1,25 @@
+# Use the official MariaDB image as the base
 FROM mariadb:10.6.4-focal
+
+# Set the root password for MariaDB
+ENV MYSQL_ROOT_PASSWORD password
+
+# Create a database for WordPress
+ENV MYSQL_DATABASE wordpress
+
+# Create a user and grant privileges
+ENV MYSQL_USER wordpress
+ENV MYSQL_PASSWORD wordpress
+
+# Expose the MariaDB default port
+EXPOSE 3306
+EXPOSE 33060
+
+# Use a volume to persist MariaDB data
+VOLUME /var/lib/mysql
+
+# Copy the custom configuration file to the container
+COPY custom.cnf /etc/mysql/conf.d/custom.cnf
+
+# Start MariaDB service
+CMD ["mysqld"]
