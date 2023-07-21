@@ -22,6 +22,7 @@ services:
     expose:
       - 3306
       - 33060
+
   wordpress:
     depends_on:
       - db
@@ -42,6 +43,7 @@ services:
       - WORDPRESS_DB_USER=${myMYORDPRESS_DB_USER}
       - WORDPRESS_DB_PASSWORD=${myMYORDPRESS_DB_PASSWORD}
       - WORDPRESS_DB_NAME=${myMYORDPRESS_DB_NAME}
+
 volumes:
   db_data:
   wp_data:
