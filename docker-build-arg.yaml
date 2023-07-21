@@ -30,10 +30,10 @@ services:
     build:
       context: .
       args:
-        myMYORDPRESS_DB_HOST: ${myMYORDPRESS_DB_HOST}
-        myMYORDPRESS_DB_USER: ${myMYORDPRESS_DB_USER}
-        myMYORDPRESS_DB_PASSWORD: ${myMYORDPRESS_DB_PASSWORD}
-        myMYORDPRESS_DB_NAME: ${myMYORDPRESS_DB_NAME}
+        myWORDPRESS_DB_HOST: ${myWORDPRESS_DB_HOST}
+        myWORDPRESS_DB_USER: ${myWORDPRESS_DB_USER}
+        myWORDPRESS_DB_PASSWORD: ${myWORDPRESS_DB_PASSWORD}
+        myWORDPRESS_DB_NAME: ${myWORDPRESS_DB_NAME}
       dockerfile: Dockerfile.wordpress
     volumes:
       - wp_data:/var/www/html
@@ -41,10 +41,10 @@ services:
       - 3080:80
     restart: always
     environment:
-      - WORDPRESS_DB_HOST=${myMYORDPRESS_DB_HOST}
-      - WORDPRESS_DB_USER=${myMYORDPRESS_DB_USER}
-      - WORDPRESS_DB_PASSWORD=${myMYORDPRESS_DB_PASSWORD}
-      - WORDPRESS_DB_NAME=${myMYORDPRESS_DB_NAME}
+      - WORDPRESS_DB_HOST=${myWORDPRESS_DB_HOST}
+      - WORDPRESS_DB_USER=${myWORDPRESS_DB_USER}
+      - WORDPRESS_DB_PASSWORD=${myWORDPRESS_DB_PASSWORD}
+      - WORDPRESS_DB_NAME=${myWORDPRESS_DB_NAME}
 volumes:
   db_data:
   wp_data:
