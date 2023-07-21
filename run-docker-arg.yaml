@@ -5,11 +5,11 @@ services:
     #image: mariadb:10.6.4-focal
     # If you really want to use MySQL, uncomment the following line
     #image: mysql:8.0.27
-      args: 
-        myMYSQL_ROOT_PASSWORD: ${myMYSQL_ROOT_PASSWORD}
-        myMYSQL_DATABASE: ${myMYSQL_DATABASE}
-        myMYSQL_USER: ${myMYSQL_USER}
-        myMYSQL_PASSWORD: ${myMYSQL_PASSWORD}
+    args: 
+      myMYSQL_ROOT_PASSWORD: ${myMYSQL_ROOT_PASSWORD}
+      myMYSQL_DATABASE: ${myMYSQL_DATABASE}
+      myMYSQL_USER: ${myMYSQL_USER}
+      myMYSQL_PASSWORD: ${myMYSQL_PASSWORD}
     command: '--default-authentication-plugin=mysql_native_password'
     volumes:
       - db_data:/var/lib/mysql
@@ -27,11 +27,11 @@ services:
       - db
     image: yaoit8791/testarg:wordpress
     #image: <dockerhub_username>/<repository_name>:wordpress
-      args:
-        myMYORDPRESS_DB_HOST: ${myMYORDPRESS_DB_HOST}
-        myMYORDPRESS_DB_USER: ${myMYORDPRESS_DB_USER}
-        myMYORDPRESS_DB_PASSWORD: ${myMYORDPRESS_DB_PASSWORD}
-        myMYORDPRESS_DB_NAME: ${myMYORDPRESS_DB_NAME}
+    args:
+      myMYORDPRESS_DB_HOST: ${myMYORDPRESS_DB_HOST}
+      myMYORDPRESS_DB_USER: ${myMYORDPRESS_DB_USER}
+      myMYORDPRESS_DB_PASSWORD: ${myMYORDPRESS_DB_PASSWORD}
+      myMYORDPRESS_DB_NAME: ${myMYORDPRESS_DB_NAME}
     volumes:
       - wp_data:/var/www/html
     ports:
