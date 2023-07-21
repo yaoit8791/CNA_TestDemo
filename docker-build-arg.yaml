@@ -2,10 +2,11 @@ services:
   db:
     build:
       context: .
-      ARG myMYSQL_ROOT_PASSWORD
-      ARG myMYSQL_DATABASE
-      ARG myMYSQL_USER
-      ARG myMYSQL_PASSWORD
+      args: 
+      myMYSQL_ROOT_PASSWORD: ${myMYSQL_ROOT_PASSWORD}
+      myMYSQL_DATABASE: ${myMYSQL_DATABASE}
+      myMYSQL_USER: ${myMYSQL_USER}
+      myMYSQL_PASSWORD: ${myMYSQL_PASSWORD}
       dockerfile: Dockerfile.db
     # We use a mariadb image which supports both amd64 & arm64 architecture
     #image: mariadb:10.6.4-focal
@@ -28,10 +29,11 @@ services:
       - db
     build:
       context: .
-      ARG myMYORDPRESS_DB_HOST
-      ARG myMYORDPRESS_DB_USER
-      ARG myMYORDPRESS_DB_PASSWORD
-      ARG myMYORDPRESS_DB_NAME
+      args:
+      myMYORDPRESS_DB_HOST: ${myMYORDPRESS_DB_HOST}
+      myMYORDPRESS_DB_USER: ${myMYORDPRESS_DB_USER}
+      myMYORDPRESS_DB_PASSWORD: ${myMYORDPRESS_DB_PASSWORD}
+      myMYORDPRESS_DB_NAME: ${myMYORDPRESS_DB_NAME}
       dockerfile: Dockerfile.wordpress
     volumes:
       - wp_data:/var/www/html
